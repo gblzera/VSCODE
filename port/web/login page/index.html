@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-container">
+        <div class="button-group">
+          <button class="tab-button active" onclick="openTab('signin')">
+            Sign in
+          </button>
+          <button class="tab-button" onclick="openTab('signup')">
+            Sign up
+          </button>
+        </div>
+        <div id="signin" class="tab-content">
+          <form action="#">
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input
+                type="text"
+                id="username"
+                placeholder="Username"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                placeholder="*******"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input type="checkbox" id="remember-me" />
+              <label for="remember-me">Remember me</label>
+            </div>
+            <button type="submit">Enter</button>
+            <button class="forgot-password">Forgot password?</button>
+          </form>
+        </div>
+        <div id="signup" class="tab-content" style="display: none">
+          <form action="#">
+            <div class="form-group">
+              <label for="username-signup">Username</label>
+              <input
+                type="text"
+                id="username-signup"
+                placeholder="Username"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="Email" required />
+            </div>
+            <div class="form-group">
+              <label for="cpf">CPF</label>
+              <input type="text" id="cpf" placeholder="CPF" required />
+            </div>
+            <div class="form-group">
+              <label for="telefone">Telefone</label>
+              <input
+                type="text"
+                id="telefone"
+                placeholder="Telefone"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="password-signup">Senha</label>
+              <input
+                type="password"
+                id="password-signup"
+                placeholder="*******"
+                required
+              />
+            </div>
+            <button type="submit">Registrar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
