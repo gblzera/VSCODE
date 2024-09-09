@@ -1,0 +1,14 @@
+{
+  "folders": [
+	{
+		"path": ".."
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "VSCODE",
+    "files.associations": {
+      "stdlib.h": "c",
+      "caixa.h": "c"
+    }
+  }
+}
