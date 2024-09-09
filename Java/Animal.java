@@ -25,7 +25,7 @@ public class Animal{
         if (age > 0){
             this.age = age;
         }else{
-            System.out.println("A idade deve ser positiva.");
+            System.out.println("Sabe ler não ? Idade tem que ser positiva...");
         }
     }
 

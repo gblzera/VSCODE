@@ -1,32 +1,21 @@
 public class Main {
-    public String name;
-    public int age;
-
     public static void main(String[] args) {
-        
-        
-        Main dog = new Main();
-        dog.name = "Rex";
-        dog.age = 5;
+        String catName = "Chloe";
+        int catAge = 1;
 
-       
-        System.out.println("O nome do cachorro é: " + dog.name);
-        System.out.println("A idade do cachorro é: " + dog.age);
+        System.out.println("Nome do gato(a): " + catName);
+        System.out.println("Idade do gato(a): " + catAge);
 
-      
-        dog.age = -3; 
-        System.out.println("A nova idade do cachorro: " + dog.age);
+        makeCatSound();
 
-        dog.makeSound();
-
-        dog.dogMakeSound();
+        describreCat(catName, catAge);
     }
 
-    public void makeSound() {
-        System.out.println("O animal está fazendo um som.");
+    public static void makeCatSound(){
+        System.out.println("O gato está miando.");
     }
 
-    public void dogMakeSound() {
-        System.out.println("O cachorro está latindo.");
+    public static void describreCat(String name, int age){
+        System.out.println("Gato(a) " + name + ", idade " + age + " anos.");
     }
 }

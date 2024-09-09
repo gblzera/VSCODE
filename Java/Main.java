@@ -1,11 +1,23 @@
+import java.util.Scanner;
+
 public class Main{
     public static void main(String[] args){
-        Cat cat = new Cat("Chloe", 1);
+        Scanner scanner = new Scanner(System.in);
 
-        System.out.println("O nome do gato(a) é:  " + cat.getName());
-        System.out.println("A idade do gato(a) é: " + cat.getAge());
+        System.out.print("Informe o nome do gato(a): ");
+        String name = scanner.nextLine();
 
-        cat.setAge(-2);
+        System.out.print("Informe a idade do gato(a): ");
+        int age = scanner.nextInt();
+
+        Cat cat = new Cat(name, age);
+
+        System.out.println("Nome: " + cat.getName());
+        System.out.println("Idade: " + cat.getAge());
+
+        System.out.print("Informe uma nova idade (deve ser positiva):");
+        int newAge = scanner.nextInt();
+        cat.setAge(newAge);
 
         cat.makeSound();
 
