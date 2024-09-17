@@ -1,82 +1,132 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h>
 
-#define MAX_NODES 1001
+typedef struct vertice
+{
+    struct lista *adj;
+    int visitado;
+} vertice;
 
-typedef struct Node{
-    int *vizinhos;
-    int tamanho;
-    int capac;
-} Node;
+typedef struct lista
+{
+    struct registro *inicio;
+    struct registro *final;
+} lista;
 
-void init_node(Node *node){
-    node->tamanho = 0;
-    node->capac = 2;
-    node->vizinhos = (int *)malloc(node->capac * sizeof(int));
-}
+typedef struct registro
+{
+    int valor;
+    struct registro *prox;
+} registro;
 
-void add_vizinho(Node *node, int vizinho){
-    if (node->tamanho == node->capac){
-        node->capac *= 2;
-        node->vizinhos = (int *)realloc(node->vizinhos, node->capac * sizeof(int));
-    }
-    node->vizinhos[node->tamanho++] = vizinho;
-}
+lista *aloca_lista();
+registro *aloca_registro();
+void mostrar_lista(lista *l);
+void incluir_vertice_lista_adjacencia(vertice *v, int valor);
+void dfs(int raiz, vertice *vertices);
+int main()
+{
 
-void free_node(Node *node){
-    free(node->vizinhos);
-}
+    int qtd_vertices, qtd_arestas, i, a, b;
+    vertice *vertices;
 
-bool dfs(Node tree[], int inicio, int alvo, bool visitados[]){
-    if (inicio == alvo) {
-        return true;
-     }
+    scanf("%d %d", &qtd_vertices, &qtd_arestas);
 
-     visitados[inicio] = true;
+    vertices = (vertice *)calloc(sizeof(vertice), qtd_vertices + 1);
 
-     for (int i = 0; i < tree[inicio].tamanho; i++){
-        int vizinho = tree[inicio].vizinhos[i];
-        if (!visitados[vizinho]){
-            if (dfs(tree, vizinho, alvo, visitados)){
-                return true;
-            }
-        }
-     }
-
-     return false;
-}
-
-int main(){
-    int A, B;
-    scanf("%d %d", &A, &B);
-
-    Node tree[MAX_NODES];
-    for (int i = 0; i < MAX_NODES; i++){
-        init_node(&tree[i]);
-    }
-
-    for (int i = 0; i < A - 1; i++){
-        int u, v;
-        scanf("%d %d", &u, &v);
-        add_vizinho(&tree[u], v);
-    }
-
-    for (int i = 0; i < B; i++){
-        int a,b;
+    for (i = 0; i < qtd_arestas; i++)
+    {
         scanf("%d %d", &a, &b);
-        bool visitados[MAX_NODES] = {false};
-
-        if (dfs(tree, a, b, visitados)){
-            printf("SIM\n");
-        }else{
-            printf("NAO\n");
-        }
+        incluir_vertice_lista_adjacencia(&vertices[a], b);
+        incluir_vertice_lista_adjacencia(&vertices[b], a);
     }
 
-    for (int i = 1; i <= A; i++){
-        free_node(&tree[i]);
+    printf("Lista da Adjacencia: \n");
+    for (i = 1; i <= qtd_vertices; i++)
+    {
+        printf("Vertice: %d -> ", i);
+        mostrar_lista(vertices[i].adj);
+        printf("\n");
     }
+
+    dfs(1,vertices);
 
     return 0;
+}
+
+void dfs(int raiz, vertice *vertices)
+{
+    vertices[raiz].visitado = 1;
+
+    registro *aux;
+    if (vertices[raiz].adj != NULL)
+    {
+        aux = vertices[raiz].adj->inicio;
+
+        while (aux != NULL)
+        {
+            if (vertices[aux->valor].visitado == 0)
+            {
+                dfs(aux->valor, vertices);
+            }
+            aux = aux->prox;
+        }
+    }
+}
+
+void incluir_vertice_lista_adjacencia(vertice *v, int valor)
+{
+    if (v->adj == NULL)
+    {
+        v->adj = aloca_lista();
+    }
+
+    registro *novo = aloca_registro();
+    novo->valor = valor;
+
+    if (v->adj->inicio == NULL)
+    {
+        v->adj->inicio = novo;
+        v->adj->final = novo;
+    }
+    else
+    {
+        v->adj->final->prox = novo;
+        v->adj->final = novo;
+    }
+}
+
+lista *aloca_lista()
+{
+    lista *novo = (lista *)calloc(sizeof(lista), 1);
+    return novo;
+}
+
+registro *aloca_registro()
+{
+    registro *novo = (registro *)calloc(sizeof(registro), 1);
+    return novo;
+}
+
+void mostrar_lista(lista *l)
+{
+
+    registro *aux;
+    if (l == NULL)
+    {
+        return;
+    }
+
+    if (l->inicio == NULL)
+    {
+        return;
+    }
+
+    aux = l->inicio;
+
+    while (aux != NULL)
+    {
+        printf("%d ", aux->valor);
+        aux = aux->prox;
+    }
 }
