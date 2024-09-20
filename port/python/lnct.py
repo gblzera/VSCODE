@@ -5,7 +5,7 @@ import time
 
 linkedin_email = 'gabriel.kpaz@gmail.com'
 linkedin_password = 'Ser41173525'
-search_query = 'programador'  
+search_query = 'programacao'  
 personalized_message = 'Olá {name}, sou estudante de Engenharia da Computação, atualmente no sexto semestre da faculdade. Tenho um grande interesse em programação e estou sempre em busca de novas oportunidades para aplicar e expandir meus conhecimentos na área. Estou entusiasmado para explorar e contribuir para projetos desafiadores e inovadores. Agradeço a oportunidade de me apresentar e estou à disposição para conversar mais sobre possíveis colaborações ou oportunidades.'
 
 driver = webdriver.Chrome()

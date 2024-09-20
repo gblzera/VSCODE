@@ -23,6 +23,6 @@ void generateAlphabet(int num){
 }
 
 int main(){
-    generateAlphabet(12);
+    generateAlphabet(26);
     return 0;
 }

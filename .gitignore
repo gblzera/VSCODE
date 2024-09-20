@@ -1,0 +1,12 @@
+# Arquivos
+
+automacao_clockify.py
+project_aliases.json
+
+# Diretórios
+
+python/*
+
+# * Qualquer coisa
+# ? Um caracter
+# Intervalos [0-9] ou [a-z]
