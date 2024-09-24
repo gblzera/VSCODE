@@ -2,7 +2,7 @@ public class Cliente {
     private String nome;
     private String endereco;
     private String telefone;
-    private Animal[] animais;
+    private final Animal[] animais;
     private int qtdAnimais;
 
     public Cliente(String nome, String endereco, String telefone, int maxAnimais) {

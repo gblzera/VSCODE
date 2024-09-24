@@ -2,7 +2,7 @@ public class Veterinario {
     private String nome;
     private int id;
     private String especialidade;
-    private Consulta[] consultas;
+    private final Consulta[] consultas;
     private int qtdConsultas;
 
     public Veterinario(String nome, int id, String especialidade, int maxConsultas) {
@@ -11,6 +11,10 @@ public class Veterinario {
         this.especialidade = especialidade;
         this.consultas = new Consulta[maxConsultas];
         this.qtdConsultas = 0;
+    }
+
+    public Veterinario(String nome, int id, String especialidade){
+        this(nome, id, especialidade, 10);
     }
 
     public void realizarConsulta(Animal animal, String data, String sintomas, String diagnostico) {
@@ -22,7 +26,7 @@ public class Veterinario {
     
             animal.atualizarHistorico(novaConsulta);
             consultas[qtdConsultas++] = novaConsulta;
-            System.out.println("Consulta realizada com sucesso pelo veterinário " + nome);
+            System.out.println("Consulta realizada com sucesso pelo veterinário " + nome + " " + id);
         } else {
             System.out.println("Limite de consultas atingido.");
         }
