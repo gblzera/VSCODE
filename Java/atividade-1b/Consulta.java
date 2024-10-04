@@ -2,7 +2,7 @@ public class Consulta {
     private String data;
     private String sintomas;
     private String diagnostico;
-    private String[] exames;
+    private final String[] exames;
     private int totalExames;
 
     public Consulta() {
