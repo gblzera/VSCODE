@@ -3,9 +3,12 @@
 automacao_clockify.py
 project_aliases.json
 
+
 # Diretórios
 
 python/*
+projects/moedas/*
+#Python-Projects/*
 
 # * Qualquer coisa
 # ? Um caracter
