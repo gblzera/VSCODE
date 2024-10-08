@@ -5,9 +5,12 @@ project_aliases.json
 pdf.py
 
 
+
 # Diretórios
 
 python/*
+projects/moedas/*
+#Python-Projects/*
 
 # * Qualquer coisa
 # ? Um caracter
