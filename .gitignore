@@ -5,11 +5,13 @@ project_aliases.json
 automacao_clockify.spec
 email_handler.py
 tempCodeRunnerFile.py
+pdf.py
+
 
 
 # Diretórios
 
-#python/*
+python/*
 projects/moedas/*
 
 
