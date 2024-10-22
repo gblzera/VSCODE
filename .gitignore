@@ -11,7 +11,7 @@ pdf.py
 
 # Diretórios
 
-python/*
+#python/*
 projects/moedas/*
 
 
