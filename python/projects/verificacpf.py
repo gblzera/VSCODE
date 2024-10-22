@@ -1,3 +1,5 @@
+#teste de commit
+
 cpf = input('Digite seu CPF: ')
 
 cpf_fixed = cpf.replace('.', '').replace('-','')
