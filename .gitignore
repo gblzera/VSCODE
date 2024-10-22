@@ -2,12 +2,18 @@
 
 automacao_clockify.py
 project_aliases.json
+automacao_clockify.spec
+email_handler.py
+tempCodeRunnerFile.py
 
 
 # Diretórios
 
-python/*
+#python/*
 projects/moedas/*
+
+
+#!/python/projects/verificacpf.py (ESTUDAR)
 #Python-Projects/*
 
 # * Qualquer coisa

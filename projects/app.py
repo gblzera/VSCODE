@@ -4,7 +4,7 @@ from datetime import datetime
 
 app = Flask(__name__)
 
-#configurar o BD SQLite
+#configura o BD SQLite
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///todo.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
