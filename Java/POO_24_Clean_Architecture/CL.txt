@@ -1,0 +1,13 @@
+Arquitetura Limpa (Clean Architecture)
+A Arquitetura Limpa, proposta por Robert C. Martin, tem como objetivo estruturar sistemas de forma a permitir que sejam independentes de frameworks, flexíveis para mudanças, e com fácil manutenção. 
+Os principais conceitos incluem:
+
+Camadas de Responsabilidade: A arquitetura organiza o código em camadas, cada uma com uma responsabilidade distinta. As camadas comuns incluem:
+
+Entidades: Modelos de dados e regras de negócios fundamentais.
+Casos de Uso: Regras específicas do aplicativo, usando as entidades para resolver problemas de negócios.
+Interfaces: Exposição do sistema para o mundo exterior (interfaces de usuário, APIs, etc.).
+Externa (Infraestrutura): Interações com o sistema operacional, banco de dados, frameworks, etc.
+Dependência Reversa (ou Inversão de Dependência): As camadas de nível inferior (infraestrutura, frameworks) dependem de camadas superiores (negócios e lógica de aplicação), mantendo o núcleo do sistema isolado de mudanças externas. Isso garante que mudanças na tecnologia (por exemplo, trocar o banco de dados) não afetem o núcleo do sistema.
+
+Independência de Frameworks: O design visa que o sistema não dependa de ferramentas específicas, mantendo a possibilidade de trocar frameworks sem refatorações extensas.
