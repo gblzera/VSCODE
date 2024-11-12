@@ -1,0 +1,6 @@
+public void adicionarNota(double nota) {
+    if (nota < 0 || nota > 10) {
+        throw new IllegalArgumentException("Nota inválida. Deve estar entre 0 e 10.");
+    }
+    this.notas.add(nota);
+}

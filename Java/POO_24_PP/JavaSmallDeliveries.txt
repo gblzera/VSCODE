@@ -1,0 +1,19 @@
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
+public class MateriaTest {
+    @Test
+    public void testCalcularMedia() {
+        Materia materia = new Materia("História");
+        materia.adicionarNota(8.0);
+        materia.adicionarNota(6.0);
+        assertEquals(7.0, materia.calcularMedia());
+    }
+
+    @Test
+    public void testAdicionarNotaInvalida() {
+        Materia materia = new Materia("História");
+        assertThrows(IllegalArgumentException.class, () -> materia.adicionarNota(11.0));
+    }
+}

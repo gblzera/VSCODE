@@ -1,0 +1,14 @@
+Programação Pragmática
+A Programação Pragmática é uma abordagem que se concentra em práticas de desenvolvimento práticas e realistas. Baseado no livro The Pragmatic Programmer de Andrew Hunt e David Thomas, ele defende práticas que ajudam os desenvolvedores a resolver problemas de maneira eficaz. Alguns princípios-chave incluem:
+
+DRY (Don't Repeat Yourself): Evitar duplicação de código. O objetivo é que cada pedaço de conhecimento exista uma vez e apenas uma vez no código, o que facilita a manutenção.
+
+Programação Defensiva: Prevenir problemas ao considerar casos de erro e falhas. Isso inclui validar entradas, prever cenários incomuns e lidar com exceções.
+
+Automação de Tarefas: Automatizar tarefas repetitivas, como testes, compilação e integração, para aumentar a eficiência e reduzir erros manuais.
+
+Feedback Contínuo: Usar feedback rápido de testes e revisões para identificar e corrigir erros o mais cedo possível.
+
+Pequenas Entregas: Dividir o desenvolvimento em pequenas entregas e realizar revisões constantes, o que permite ajustar o código conforme a necessidade e reduzir o acúmulo de erros.
+
+Essa abordagem incentiva o desenvolvedor a criar software de qualidade, tomando decisões técnicas conscientes, evitando erros comuns e melhorando a produtividade.
