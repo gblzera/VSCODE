@@ -11,8 +11,10 @@ pdf.py
 
 # Diretórios
 
-#python/*
-projects/moedas/*
+VSCODE/python/*
+VSCODE/projects/moedas/*
+VSCODE/videos/*
+VSCODE/manim/*
 
 
 #!/python/projects/verificacpf.py (ESTUDAR)
