@@ -33,10 +33,10 @@ public class Processo {
     public String toString() {
         return "Processo:\n" +
                "  Número do Processo: " + numeroProcesso + "\n" +
-               "  Cliente: " + cliente + "\n" +
-               "  Parte Contrária: " + parteContraria + "\n" +
-               "  Advogado do Cliente: " + advogadoCliente + "\n" +
-               "  Advogado da Parte Contrária: " + advogadoParteContraria + "\n" +
+               "  Autor: " + cliente + "\n" +
+               "  Réu: " + parteContraria + "\n" +
+               "  Advogado do Autor: " + advogadoCliente + "\n" +
+               "  Advogado da Réu: " + advogadoParteContraria + "\n" +
                "  Audiências: " + audiencias + "\n" +
                "  Custos: " + custos + "\n";
     }

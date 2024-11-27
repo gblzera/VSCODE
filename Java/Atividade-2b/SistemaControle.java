@@ -49,6 +49,8 @@ public class SistemaControle {
     }
 
     public static void main(String[] args) {
+
+        System.out.println("Gabriel Henrique Kuhn Paz - 2212082043");
         SistemaControle sistema = new SistemaControle();
 
         // Cadastro de Clientes
@@ -56,8 +58,8 @@ public class SistemaControle {
         sistema.cadastrarCliente("Super-man", "Física", "777.345.200-20");
 
         // Cadastro de Advogados
-        sistema.cadastrarAdvogado("Alfred", "OAB-22911");
-        sistema.cadastrarAdvogado("Lex Luthor", "OAB-02034");
+        sistema.cadastrarAdvogado("Lex Luthor", "OAB-22911");
+        sistema.cadastrarAdvogado("Coringa", "OAB-02034");
 
         // Cadastro de Processo
         sistema.cadastrarProcesso(
@@ -72,11 +74,11 @@ public class SistemaControle {
         sistema.cadastrarAudiencia("0000863-53.2022.5.10.0010", "2024-12-20", "Audiência de conciliação");
 
         // Cadastro de Custo
-        sistema.cadastrarCusto("0000863-53.2022.5.10.0010", "Taxa de serviço", 7500.00);
+        sistema.cadastrarCusto("0000863-53.2022.5.10.0010", "Taxa de serviço", 7500000.00);
 
         // Listar Processos
         sistema.listarProcessos();
 
-        System.out.println("Gabriel Henrique Kuhn Paz - 2212082043");
+        
     }
 }
